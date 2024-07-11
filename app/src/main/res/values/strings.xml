@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MoodColouring2</string>
+    <string-array name="ImageChoices">
+        <item>Nottingham Logo</item>
+        <item>Coca Cola</item>
+        <item>Apple</item>
+    </string-array>
+</resources>

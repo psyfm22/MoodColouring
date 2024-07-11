@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoodPickerActivity">
+
+    <TextView
+        android:id="@+id/titleMoodTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="279dp"
+        android:text="How are you feeling today?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/happyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="Happy"
+        app:layout_constraintStart_toEndOf="@+id/excitedButton"
+        app:layout_constraintTop_toTopOf="@+id/exhaustedButton" />
+
+    <Button
+        android:id="@+id/excitedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="102dp"
+        android:text="Excited"
+        app:layout_constraintBaseline_toBaselineOf="@+id/happyButton"
+        app:layout_constraintEnd_toStartOf="@+id/titleMoodTextView" />
+
+    <Button
+        android:id="@+id/exhaustedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:text="Exhausted"
+        app:layout_constraintBaseline_toBaselineOf="@+id/surprisedButton"
+        app:layout_constraintStart_toEndOf="@+id/happyButton" />
+
+    <Button
+        android:id="@+id/surprisedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="78dp"
+        android:text="Surprised"
+        app:layout_constraintStart_toEndOf="@+id/exhaustedButton"
+        app:layout_constraintTop_toBottomOf="@+id/titleMoodTextView" />
+
+    <Button
+        android:id="@+id/downcastButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="Downcast"
+        app:layout_constraintBaseline_toBaselineOf="@+id/surprisedButton"
+        app:layout_constraintStart_toEndOf="@+id/surprisedButton" />
+
+    <Button
+        android:id="@+id/returnMainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="115dp"
+        android:text="Home"
+        app:layout_constraintStart_toStartOf="@+id/exhaustedButton"
+        app:layout_constraintTop_toBottomOf="@+id/exhaustedButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

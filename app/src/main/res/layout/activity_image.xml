@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageActivity">
+
+    <ImageView
+        android:id="@+id/bitmapImageView"
+        android:layout_width="800dp"
+        android:layout_height="800dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/startProcessingServiceButton"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="195dp"
+        android:layout_marginTop="75dp"
+        android:text="Load Image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/bitmapImageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageSpinner" />
+
+    <Spinner
+        android:id="@+id/imageSpinner"
+        android:layout_width="297dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="116dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="92dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="132dp"
+        android:text="Select Image:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/bitmapImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/downcastTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="304dp"
+        android:text="Downcast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/blueView"
+        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+
+    <View
+        android:id="@+id/blueView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="296dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/bitmapImageView"
+        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+
+    <TextView
+        android:id="@+id/happyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="160dp"
+        android:text="Happy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/redView"
+        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+
+    <TextView
+        android:id="@+id/surprisedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="256dp"
+        android:text="Surprised"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/greenView"
+        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+
+    <View
+        android:id="@+id/greyView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="223dp"
+        android:layout_marginTop="200dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toEndOf="@+id/bitmapImageView"
+        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+
+    <TextView
+        android:id="@+id/excitedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="108dp"
+        android:text="Excited"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/yellowView"
+        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+
+    <View
+        android:id="@+id/greenView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="248dp"
+        android:background="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toEndOf="@+id/bitmapImageView"
+        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+
+    <View
+        android:id="@+id/yellowView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/bitmapImageView"
+        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+
+    <View
+        android:id="@+id/redView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="223dp"
+        android:layout_marginTop="152dp"
+        android:background="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toEndOf="@+id/bitmapImageView"
+        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+
+    <TextView
+        android:id="@+id/exhaustedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="208dp"
+        android:text="Exhausted"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/greyView"
+        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
