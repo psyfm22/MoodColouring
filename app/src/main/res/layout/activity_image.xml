@@ -11,164 +11,183 @@
         android:id="@+id/bitmapImageView"
         android:layout_width="800dp"
         android:layout_height="800dp"
+        android:visibility="gone"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <Spinner
+        android:id="@+id/imageSpinner"
+        android:layout_width="297dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="198dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="226dp"
+        app:layout_constraintBottom_toTopOf="@+id/excitedTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264" />
+
     <Button
         android:id="@+id/startProcessingServiceButton"
         android:layout_width="144dp"
         android:layout_height="48dp"
-        android:layout_marginStart="195dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="104dp"
         android:text="Load Image"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/bitmapImageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageSpinner" />
-
-    <Spinner
-        android:id="@+id/imageSpinner"
-        android:layout_width="297dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="116dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="92dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="132dp"
-        android:text="Select Image:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/bitmapImageView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/downcastTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="304dp"
-        android:text="Downcast"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/blueView"
-        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
-
-    <View
-        android:id="@+id/blueView"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginTop="296dp"
-        android:background="@color/blue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/bitmapImageView"
-        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
-
-    <TextView
-        android:id="@+id/happyTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="160dp"
-        android:text="Happy"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/redView"
-        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
-
-    <TextView
-        android:id="@+id/surprisedTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="256dp"
-        android:text="Surprised"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/greenView"
-        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
-
-    <View
-        android:id="@+id/greyView"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="223dp"
-        android:layout_marginTop="200dp"
-        android:background="@color/gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
-        app:layout_constraintStart_toEndOf="@+id/bitmapImageView"
-        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+        app:layout_constraintTop_toBottomOf="@+id/imageSpinner"
+        app:layout_constraintVertical_bias="0.022" />
 
     <TextView
         android:id="@+id/excitedTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="25dp"
         android:text="Excited"
+        app:layout_constraintBottom_toTopOf="@+id/redView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/yellowView"
-        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+        app:layout_constraintTop_toBottomOf="@+id/imageSpinner" />
 
-    <View
-        android:id="@+id/greenView"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="248dp"
-        android:background="@color/green"
+    <TextView
+        android:id="@+id/surprisedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="21dp"
+        android:text="Surprised"
+        app:layout_constraintBottom_toTopOf="@+id/blueView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.034"
-        app:layout_constraintStart_toEndOf="@+id/bitmapImageView"
-        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
-
-    <View
-        android:id="@+id/yellowView"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginTop="100dp"
-        android:background="@color/yellow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/bitmapImageView"
-        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+        app:layout_constraintStart_toEndOf="@+id/greenView"
+        app:layout_constraintTop_toBottomOf="@+id/exhaustedTextView" />
 
     <View
         android:id="@+id/redView"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="223dp"
-        android:layout_marginTop="152dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1063dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="26dp"
         android:background="@color/red"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
-        app:layout_constraintStart_toEndOf="@+id/bitmapImageView"
-        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+        app:layout_constraintBottom_toTopOf="@+id/exhaustedTextView"
+        app:layout_constraintEnd_toStartOf="@+id/happyTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/excitedTextView" />
 
     <TextView
         android:id="@+id/exhaustedTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="29dp"
         android:text="Exhausted"
+        app:layout_constraintBottom_toTopOf="@+id/surprisedTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/greyView"
-        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton" />
+        app:layout_constraintTop_toBottomOf="@+id/redView" />
+
+    <ImageView
+        android:id="@+id/loadingImageView"
+        android:layout_width="800dp"
+        android:layout_height="800dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/loading" />
+
+    <TextView
+        android:id="@+id/happyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="3dp"
+        android:text="Happy"
+        app:layout_constraintBottom_toBottomOf="@+id/redView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/redView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="92dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="32dp"
+        android:text="Select Image:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageSpinner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.266" />
+
+    <View
+        android:id="@+id/yellowView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="1034dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="31dp"
+        android:background="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/excitedTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startProcessingServiceButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/greyView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="1063dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="93dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/downcastTextView"
+        app:layout_constraintEnd_toStartOf="@+id/exhaustedTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/excitedTextView" />
+
+    <TextView
+        android:id="@+id/downcastTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="122dp"
+        android:layout_marginBottom="3dp"
+        android:text="Downcast"
+        app:layout_constraintBottom_toBottomOf="@+id/blueView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/blueView" />
+
+    <View
+        android:id="@+id/greenView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="1072dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="48dp"
+        android:background="@color/green"
+        app:layout_constraintBottom_toBottomOf="@+id/blueView"
+        app:layout_constraintEnd_toStartOf="@+id/surprisedTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/greyView" />
+
+    <View
+        android:id="@+id/blueView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1045dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="109dp"
+        android:background="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/downcastTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/surprisedTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

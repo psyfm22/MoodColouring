@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
@@ -38,11 +39,18 @@ public class ImageActivity extends AppCompatActivity implements AdapterView.OnIt
     private boolean isBound = false;
     private ImageView imageView;
     private int inputImage;
+    private ImageView loadingImageView;
+    private AnimationDrawable animationDrawable;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image);
+
+        loadingImageView = findViewById(R.id.loadingImageView);
+
 
         imageView = findViewById(R.id.bitmapImageView);
         Button button = findViewById(R.id.startProcessingServiceButton);
@@ -61,7 +69,10 @@ public class ImageActivity extends AppCompatActivity implements AdapterView.OnIt
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                imageView.setImageResource(R.drawable.loading);
+                loadingImageView.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.GONE);
+                animationDrawable = (AnimationDrawable) loadingImageView.getDrawable();
+                animationDrawable.start();
                 Intent intent = new Intent(ImageActivity.this, ImageProcessingService.class);
                 intent.putExtra("responseCounts", responseCounts);
                 intent.putExtra("totalResponses", totalResponses);
@@ -90,6 +101,9 @@ public class ImageActivity extends AppCompatActivity implements AdapterView.OnIt
                 public void onImageProcessed(Bitmap bitmap) {
                     runOnUiThread(() -> {
                         imageView.setImageBitmap(bitmap);
+                        animationDrawable.stop();
+                        loadingImageView.setVisibility(View.GONE);
+                        imageView.setVisibility(View.VISIBLE);
                     });
                 }
             });
